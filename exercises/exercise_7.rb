@@ -10,3 +10,15 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+
+puts "Please input a store name:"
+@user_store = gets.chomp
+
+user_store = Store.create(name: @user_store)
+puts (user_store.valid?)
+puts (user_store.errors.full_messages) unless user_store.save
+
+
+
+
